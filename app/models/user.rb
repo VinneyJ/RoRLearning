@@ -7,4 +7,5 @@ class User < ApplicationRecord
     validates :password_confirmation, presence: true, length: { minimum: 6 }
     #validates :password, confirmation: true, length { maximum: 50 ,minimum: 6}
     validates_presence_of :name, :password, :password_confirmation
+    has_secure_password
 end
